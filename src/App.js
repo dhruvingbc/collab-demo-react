@@ -3,7 +3,7 @@ import Form from "./components/Form";
 import {nanoid} from "nanoid";
 
 function App(props) {
-  const [task, setTask] = useState(props.tasks);
+  const [task, setTasks] = useState(props.tasks);
 
   function addTask(name) {
     const newTask = {id: "todo-"+nanoid(), name:name, completed:false};
@@ -11,7 +11,7 @@ function App(props) {
   }
 
   return (
-    <div>
+    <div className="stack-large todoapp" >
       <Form addTask={addTask} />
     </div>
   )
